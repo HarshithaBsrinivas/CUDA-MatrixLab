@@ -1,0 +1,534 @@
+{
+  "schema": "cuda-matrixlab-results/v1",
+  "generated_at": "2026-10-09T16:42:46+00:00",
+  "source": "google-colab",
+  "environment": {
+    "os": "Linux-6.6.122+-x86_64-with-glibc2.39",
+    "python": "3.13.15",
+    "cpu_model": "Intel(R) Xeon(R) CPU @ 2.00GHz",
+    "gpu_name": "Tesla T4",
+    "driver_version": "580.82.07",
+    "compute_capability": "7.5",
+    "cuda_version": "13.0",
+    "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "nvcc_arch_flag": "-arch=sm_75"
+  },
+  "runs": [
+    {
+      "kernel": "cpu_matmul",
+      "n": 256,
+      "reps": 3,
+      "device": "host-cpu",
+      "compute_capability": null,
+      "time_scope": "wall_clock_compute_only",
+      "times_ms": [
+        4.387617,
+        4.533024,
+        4.59223
+      ],
+      "median_ms": 4.533024,
+      "min_ms": 4.387617,
+      "metric": {
+        "type": "gflops",
+        "value": 7.402218034
+      },
+      "verified": true,
+      "max_abs_error": 3.776419749e-05
+    },
+    {
+      "kernel": "cpu_matmul",
+      "n": 512,
+      "reps": 3,
+      "device": "host-cpu",
+      "compute_capability": null,
+      "time_scope": "wall_clock_compute_only",
+      "times_ms": [
+        40.560474,
+        38.470078,
+        39.165338
+      ],
+      "median_ms": 39.165338,
+      "min_ms": 38.470078,
+      "metric": {
+        "type": "gflops",
+        "value": 6.853903725
+      },
+      "verified": true,
+      "max_abs_error": 0.0001119810296
+    },
+    {
+      "kernel": "cpu_matmul",
+      "n": 1024,
+      "reps": 3,
+      "device": "host-cpu",
+      "compute_capability": null,
+      "time_scope": "wall_clock_compute_only",
+      "times_ms": [
+        295.200544,
+        290.079695,
+        474.153026
+      ],
+      "median_ms": 295.200544,
+      "min_ms": 290.079695,
+      "metric": {
+        "type": "gflops",
+        "value": 7.274660198
+      },
+      "verified": true,
+      "max_abs_error": 0.0003271477007
+    },
+    {
+      "kernel": "cpu_matmul",
+      "n": 2048,
+      "reps": 3,
+      "device": "host-cpu",
+      "compute_capability": null,
+      "time_scope": "wall_clock_compute_only",
+      "times_ms": [
+        2424.036703,
+        2534.837739,
+        2426.937673
+      ],
+      "median_ms": 2426.937673,
+      "min_ms": 2424.036703,
+      "metric": {
+        "type": "gflops",
+        "value": 7.07882587
+      },
+      "verified": true,
+      "max_abs_error": 0.0006803631127
+    },
+    {
+      "kernel": "cuda_naive_matmul",
+      "n": 256,
+      "reps": 10,
+      "device": "Tesla T4",
+      "compute_capability": "7.5",
+      "time_scope": "kernel_only_cuda_events",
+      "times_ms": [
+        0.100064002,
+        0.1007039994,
+        0.1017279997,
+        0.1003519967,
+        0.1000000015,
+        0.1003519967,
+        0.1003519967,
+        0.1015359983,
+        0.1003199965,
+        0.1657280028
+      ],
+      "median_ms": 0.1003519967,
+      "min_ms": 0.1000000015,
+      "metric": {
+        "type": "gflops",
+        "value": 334.3673579
+      },
+      "verified": true,
+      "max_abs_error": 3.588958899e-05
+    },
+    {
+      "kernel": "cuda_naive_matmul",
+      "n": 512,
+      "reps": 10,
+      "device": "Tesla T4",
+      "compute_capability": "7.5",
+      "time_scope": "kernel_only_cuda_events",
+      "times_ms": [
+        0.6225600243,
+        0.6229439974,
+        0.6225600243,
+        0.6226879954,
+        0.6246399879,
+        0.6240959764,
+        0.621119976,
+        0.6213120222,
+        0.6225919724,
+        0.6223999858
+      ],
+      "median_ms": 0.6225759983,
+      "min_ms": 0.621119976,
+      "metric": {
+        "type": "gflops",
+        "value": 431.1689765
+      },
+      "verified": true,
+      "max_abs_error": 0.0001119810296
+    },
+    {
+      "kernel": "cuda_naive_matmul",
+      "n": 1024,
+      "reps": 10,
+      "device": "Tesla T4",
+      "compute_capability": "7.5",
+      "time_scope": "kernel_only_cuda_events",
+      "times_ms": [
+        4.742208004,
+        4.742464066,
+        4.765696049,
+        4.889088154,
+        4.889279842,
+        4.886528015,
+        4.898816109,
+        4.886079788,
+        4.898816109,
+        4.891263962
+      ],
+      "median_ms": 4.887808084,
+      "min_ms": 4.742208004,
+      "metric": {
+        "type": "gflops",
+        "value": 439.3551487
+      },
+      "verified": true,
+      "max_abs_error": 0.0003271477007
+    },
+    {
+      "kernel": "cuda_naive_matmul",
+      "n": 2048,
+      "reps": 10,
+      "device": "Tesla T4",
+      "compute_capability": "7.5",
+      "time_scope": "kernel_only_cuda_events",
+      "times_ms": [
+        40.29759979,
+        41.59078217,
+        41.60694504,
+        41.05830383,
+        41.72185516,
+        41.69408035,
+        41.62080002,
+        41.59817505,
+        41.42547226,
+        42.22361755
+      ],
+      "median_ms": 41.60256004,
+      "min_ms": 40.29759979,
+      "metric": {
+        "type": "gflops",
+        "value": 412.9522117
+      },
+      "verified": true,
+      "max_abs_error": 0.0006803631127
+    },
+    {
+      "kernel": "cuda_naive_matmul",
+      "n": 4096,
+      "reps": 10,
+      "device": "Tesla T4",
+      "compute_capability": "7.5",
+      "time_scope": "kernel_only_cuda_events",
+      "times_ms": [
+        333.0437622,
+        334.4493713,
+        332.8880615,
+        333.4779663,
+        335.2625732,
+        335.704071,
+        336.4003906,
+        335.9014587,
+        338.1413879,
+        338.6437988
+      ],
+      "median_ms": 335.4833221,
+      "min_ms": 332.8880615,
+      "metric": {
+        "type": "gflops",
+        "value": 409.6744738
+      },
+      "verified": true,
+      "max_abs_error": 0.002609259639
+    },
+    {
+      "kernel": "cuda_shared_matmul",
+      "n": 256,
+      "reps": 10,
+      "device": "Tesla T4",
+      "compute_capability": "7.5",
+      "time_scope": "kernel_only_cuda_events",
+      "times_ms": [
+        0.04518400133,
+        0.04694399983,
+        0.04505600035,
+        0.04691199958,
+        0.04720000178,
+        0.04566400126,
+        0.04662400112,
+        0.04582399875,
+        0.04537599906,
+        0.04591999948
+      ],
+      "median_ms": 0.04587199911,
+      "min_ms": 0.04505600035,
+      "metric": {
+        "type": "gflops",
+        "value": 731.4796095
+      },
+      "verified": true,
+      "max_abs_error": 3.588958899e-05
+    },
+    {
+      "kernel": "cuda_shared_matmul",
+      "n": 512,
+      "reps": 10,
+      "device": "Tesla T4",
+      "compute_capability": "7.5",
+      "time_scope": "kernel_only_cuda_events",
+      "times_ms": [
+        0.2683840096,
+        0.2688640058,
+        0.2703360021,
+        0.2791999876,
+        0.2699840069,
+        0.2695359886,
+        0.2681280077,
+        0.2682879865,
+        0.2697600126,
+        0.2703360021
+      ],
+      "median_ms": 0.2696480006,
+      "min_ms": 0.2681280077,
+      "metric": {
+        "type": "gflops",
+        "value": 995.5032316
+      },
+      "verified": true,
+      "max_abs_error": 0.0001119810296
+    },
+    {
+      "kernel": "cuda_shared_matmul",
+      "n": 1024,
+      "reps": 10,
+      "device": "Tesla T4",
+      "compute_capability": "7.5",
+      "time_scope": "kernel_only_cuda_events",
+      "times_ms": [
+        2.061280012,
+        2.063456059,
+        2.057856083,
+        2.060287952,
+        2.05846405,
+        2.067935944,
+        2.062335968,
+        2.058239937,
+        2.058271885,
+        2.059391975
+      ],
+      "median_ms": 2.059839964,
+      "min_ms": 2.057856083,
+      "metric": {
+        "type": "gflops",
+        "value": 1042.548783
+      },
+      "verified": true,
+      "max_abs_error": 0.0003271477007
+    },
+    {
+      "kernel": "cuda_shared_matmul",
+      "n": 2048,
+      "reps": 10,
+      "device": "Tesla T4",
+      "compute_capability": "7.5",
+      "time_scope": "kernel_only_cuda_events",
+      "times_ms": [
+        16.77705574,
+        18.48115158,
+        20.89795113,
+        21.6154232,
+        21.18729591,
+        20.39193535,
+        20.28748894,
+        20.32844734,
+        20.35705566,
+        20.35759926
+      ],
+      "median_ms": 20.35732746,
+      "min_ms": 16.77705574,
+      "metric": {
+        "type": "gflops",
+        "value": 843.9157457
+      },
+      "verified": true,
+      "max_abs_error": 0.0006803631127
+    },
+    {
+      "kernel": "cuda_shared_matmul",
+      "n": 4096,
+      "reps": 10,
+      "device": "Tesla T4",
+      "compute_capability": "7.5",
+      "time_scope": "kernel_only_cuda_events",
+      "times_ms": [
+        159.6600342,
+        160.9048615,
+        158.9043579,
+        162.15242,
+        161.4540863,
+        162.2033844,
+        162.1950989,
+        162.2917175,
+        162.8926392,
+        162.4017639
+      ],
+      "median_ms": 162.1737595,
+      "min_ms": 158.9043579,
+      "metric": {
+        "type": "gflops",
+        "value": 847.4796042
+      },
+      "verified": true,
+      "max_abs_error": 0.002609259639
+    },
+    {
+      "kernel": "cuda_vector_add",
+      "n": 1048576,
+      "reps": 20,
+      "device": "Tesla T4",
+      "compute_capability": "7.5",
+      "time_scope": "kernel_only_cuda_events",
+      "times_ms": [
+        0.05488000065,
+        0.05667199939,
+        0.05795200169,
+        0.0580479987,
+        0.05702399835,
+        0.05734400079,
+        0.05734400079,
+        0.05708799884,
+        0.05711999908,
+        0.05567999929,
+        0.05852799863,
+        0.055904001,
+        0.05705599859,
+        0.05529600009,
+        0.05872000009,
+        0.05612799898,
+        0.05619199947,
+        0.05737600103,
+        0.05529600009,
+        0.05747200176
+      ],
+      "median_ms": 0.05707199872,
+      "min_ms": 0.05488000065,
+      "metric": {
+        "type": "gbps",
+        "value": 220.4743532
+      },
+      "verified": true,
+      "max_abs_error": 5.960464478e-08
+    },
+    {
+      "kernel": "cuda_vector_add",
+      "n": 4194304,
+      "reps": 20,
+      "device": "Tesla T4",
+      "compute_capability": "7.5",
+      "time_scope": "kernel_only_cuda_events",
+      "times_ms": [
+        0.2004799992,
+        0.2007039934,
+        0.2043520063,
+        0.2024960071,
+        0.2024320066,
+        0.2027519941,
+        0.2027519941,
+        0.2027519941,
+        0.2023680061,
+        0.2027519941,
+        0.2020480037,
+        0.2030079961,
+        0.2027519941,
+        0.2017280012,
+        0.201376006,
+        0.2027519941,
+        0.2024320066,
+        0.2022400051,
+        0.2019200027,
+        0.2015359998
+      ],
+      "median_ms": 0.2024320066,
+      "min_ms": 0.2004799992,
+      "metric": {
+        "type": "gbps",
+        "value": 248.6348322
+      },
+      "verified": true,
+      "max_abs_error": 5.960464478e-08
+    },
+    {
+      "kernel": "cuda_vector_add",
+      "n": 16777216,
+      "reps": 20,
+      "device": "Tesla T4",
+      "compute_capability": "7.5",
+      "time_scope": "kernel_only_cuda_events",
+      "times_ms": [
+        0.7870720029,
+        0.7884799838,
+        0.7901440263,
+        0.7891200185,
+        0.7899519801,
+        0.7890239954,
+        0.7884799838,
+        0.7897599936,
+        0.7898880243,
+        0.7885439992,
+        0.7886400223,
+        0.7893760204,
+        0.7987200022,
+        0.7902079821,
+        0.7884799838,
+        0.7905279994,
+        0.7883520126,
+        0.7905279994,
+        0.7886719704,
+        0.7888640165
+      ],
+      "median_ms": 0.7890720069,
+      "min_ms": 0.7870720029,
+      "metric": {
+        "type": "gbps",
+        "value": 255.143498
+      },
+      "verified": true,
+      "max_abs_error": 5.960464478e-08
+    },
+    {
+      "kernel": "cuda_vector_add",
+      "n": 67108864,
+      "reps": 20,
+      "device": "Tesla T4",
+      "compute_capability": "7.5",
+      "time_scope": "kernel_only_cuda_events",
+      "times_ms": [
+        3.055007935,
+        3.051712036,
+        3.052608013,
+        3.051487923,
+        3.050112009,
+        3.053567886,
+        3.051167965,
+        3.050303936,
+        3.052992105,
+        3.053567886,
+        3.051615953,
+        3.053024054,
+        3.053728104,
+        3.051712036,
+        3.052479982,
+        3.051520109,
+        3.051520109,
+        3.053535938,
+        3.051520109,
+        3.052704096
+      ],
+      "median_ms": 3.052096009,
+      "min_ms": 3.050112009,
+      "metric": {
+        "type": "gbps",
+        "value": 263.8535503
+      },
+      "verified": true,
+      "max_abs_error": 5.960464478e-08
+    }
+  ]
+}
